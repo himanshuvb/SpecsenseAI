@@ -2,7 +2,9 @@ from google import genai
 import os
 
 from models.requirements import UserRequirements
+from dotenv import load_dotenv
 
+load_dotenv()  # Load environment variables from .env file
 
 class LLMClient:
 
@@ -25,9 +27,9 @@ class LLMClient:
         Returns:
             UserRequirements: Pydantic model representing user requirements.
         """
-        response = self.client.generate_text(
+        response = self.client.models.generate_content(
             model=self.model_name,
-            content=user_requirements,
+            contents=user_requirements,
             config={
                 "response_mime_type": "application/json",
                 "response_schema": UserRequirements
