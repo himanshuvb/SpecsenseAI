@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SpecSense AI - Problem Statement</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 0 25px;
+            background: #ffffff;
+            color: #222222;
+        }
+
+        h1 {
+            color: #111111;
+            margin-bottom: 25px;
+        }
+
+        h2 {
+            margin-top: 35px;
+            color: #222222;
+        }
+
+        h3 {
+            margin-top: 25px;
+            color: #333333;
+        }
+
+        p {
+            margin: 12px 0;
+        }
+
+        li {
+            margin: 8px 0;
+        }
+
+        .example {
+            background: #f5f5f5;
+            padding: 12px 16px;
+            border-left: 4px solid #555;
+            margin: 15px 0;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>SpecSense AI: Problem Statement</h1>
+
+    <h2>Overview</h2>
+
+    <p>
+        In digital commerce and service ecosystems, matching users to the right
+        products is a critical driver of engagement and retention.
+    </p>
+
+    <p>
+        While traditional recommender systems rely heavily on rigid filters or
+        historical behavior, they often fail to capture the real-time context
+        and intent behind a user's need.
+    </p>
+
+    <p>
+        <strong>SpecSense AI</strong> bridges this gap by leveraging
+        <strong>Generative AI</strong> to process a user's natural language
+        preferences and context and intelligently match them to the most
+        suitable product(s) from a company-provided catalog.
+    </p>
+
+    <p>
+        Instead of overwhelming users with irrelevant choices, it offers
+        <strong>context-aware, explainable recommendations</strong> backed by
+        structured product features and customer profile metadata.
+    </p>
+
+    <p>
+        This solution is especially valuable for enterprises that already
+        possess clean product and customer datasets and want to enhance
+        personalization without redesigning their entire platform logic.
+    </p>
+
+
+    <h2>Problem Context</h2>
+
+    <p>
+        Most recommendation systems struggle to support:
+    </p>
+
+    <ul>
+        <li>
+            <strong>Flexible Input:</strong>
+            Users can't express needs like
+            "I want something light, with great battery and under ₹30k".
+        </li>
+
+        <li>
+            <strong>Transparent Recommendations:</strong>
+            Why a product was recommended isn't made clear.
+        </li>
+
+        <li>
+            <strong>Hybrid Filtering:</strong>
+            Combining structured product specs with soft preferences
+            such as "good in low light" or "eco-friendly".
+        </li>
+    </ul>
+
+    <p>
+        Companies have the <strong>data</strong> but lack the
+        <strong>intelligence layer</strong> to connect the dots using
+        natural language understanding, real-time context, and personalized
+        matching.
+    </p>
+
+    <h3>This leads to:</h3>
+
+    <ul>
+        <li>Customer indecision or drop-offs</li>
+        <li>Frustration due to irrelevant recommendations</li>
+        <li>Underutilization of product diversity</li>
+    </ul>
+
+
+    <h2>Why It Matters for Enterprises</h2>
+
+    <p>This system will help businesses:</p>
+
+    <ul>
+        <li>Deliver human-like, conversational product matching</li>
+        <li>Make product discovery faster and more trusted</li>
+        <li>Convert vague user intent into concrete decisions</li>
+        <li>Reduce cognitive load on customers</li>
+    </ul>
+
+
+    <h2>Data</h2>
+
+    <ul>
+        <li>
+            <strong>Product Catalog:</strong>
+            Structured CSV/JSON with name, specs, category, description
+        </li>
+
+        <li>
+            <strong>User Profile:</strong>
+            Age, budget, context tags, product history
+        </li>
+    </ul>
+
+
+    <h2>What SpecSense AI Does</h2>
+
+    <p>
+        SpecSense AI is a modular system that:
+    </p>
+
+    <ol>
+
+        <li>
+            <strong>Understands free-form product preference queries</strong>
+            <div class="example">
+                Example: "Need a lightweight laptop under ₹30k for travel
+                and battery life"
+            </div>
+        </li>
+
+        <li>
+            <strong>Extracts structured constraints</strong>
+            such as budget, weight and purpose, along with soft preferences
+            such as long battery life and travel-friendly.
+        </li>
+
+        <li>
+            <strong>Matches user intent with structured catalog data</strong>
+        </li>
+
+        <li>
+            <strong>Generates explainable product recommendations</strong>,
+            clearly breaking down:
+
+            <ul>
+                <li>What criteria were met</li>
+                <li>Where trade-offs exist</li>
+                <li>What soft preferences were partially fulfilled</li>
+            </ul>
+        </li>
+
+        <li>
+            <strong>Highlights gaps</strong> if no perfect match is found,
+            and suggests the closest alternatives with rationale.
+        </li>
+
+        <li>
+            <strong>Enriches results with real-world insights</strong>,
+            such as customer review snippets, availability status and
+            current offers.
+        </li>
+
+        <li>
+            <strong>Evaluates recommendation quality</strong>,
+            explainability and user satisfaction for continuous improvement.
+        </li>
+
+    </ol>
+
+
+    <h2>User Flow</h2>
+
+    <ol>
+
+        <li>
+            <strong>User Query Input (Natural Language)</strong>
+
+            <div class="example">
+                "Looking for a lightweight laptop under ₹30k,
+                good for coding and battery backup"
+            </div>
+        </li>
+
+        <li>
+            <strong>Intent Understanding &amp; Constraint Extraction</strong>
+
+            <ul>
+                <li>
+                    <strong>Hard specs:</strong>
+                    Budget, weight, use-case keywords
+                </li>
+
+                <li>
+                    <strong>Soft needs:</strong>
+                    "good for coding", "battery backup"
+                </li>
+            </ul>
+        </li>
+
+        <li>
+            <strong>Matching Engine</strong>
+
+            <ul>
+                <li>
+                    Match structured data such as RAM and battery life
+                </li>
+
+                <li>
+                    Soft match using LLMs, for example associating
+                    "good for coding" with CPU, RAM and reviews
+                </li>
+            </ul>
+        </li>
+
+        <li>
+            <strong>Recommendation + Transparency Layer</strong>
+
+            <p>For each product, show:</p>
+
+            <ul>
+                <li>Hard matches</li>
+                <li>Soft matches</li>
+                <li>Trade-offs</li>
+                <li>Unmet needs</li>
+            </ul>
+        </li>
+
+        <li>
+            <strong>Gap Detection Layer (if needed)</strong>
+
+            <div class="example">
+                "No products meet all criteria. Showing best alternatives…"
+            </div>
+        </li>
+
+        <li>
+            <strong>Enrichment with Real-World Insights</strong>
+
+            <ul>
+                <li>Add relevant customer review snippets</li>
+                <li>Mention availability/offers if data exists</li>
+            </ul>
+        </li>
+
+        <li>
+            <strong>Evaluation Layer</strong>
+
+            <ul>
+                <li>
+                    Track quality of match, correctness of rationale,
+                    and explainability.
+                </li>
+            </ul>
+        </li>
+
+    </ol>
+
+
+    <h2>Technical Requirements</h2>
+
+    <ul>
+        <li>Python 3.12+</li>
+        <li>Gemini API (Google Generative AI) or OpenAI API (optional)</li>
+        <li>Pandas (for parsing and structuring reviews)</li>
+        <li>Streamlit (for interactive UI)</li>
+        <li>Python-dotenv (for environment configs)</li>
+        <li>Pydantic (for schema validation)</li>
+    </ul>
+
+
+    <h2>Learning Outcomes</h2>
+
+    <p>
+        By solving a real-world consumer problem, this project gives learners
+        the skills to:
+    </p>
+
+    <ul>
+        <li>Design practical LLM pipelines</li>
+        <li>Apply advanced prompting techniques</li>
+        <li>Evaluate outputs for interpretability and usability</li>
+        <li>Build scalable, modular systems for real-world deployment</li>
+    </ul>
+
+</body>
+</html>

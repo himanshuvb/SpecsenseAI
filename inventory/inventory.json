@@ -1,0 +1,236 @@
+[
+  {
+    "name": "TravelBook 14",
+    "category": "laptop",
+    "price": 28999,
+    "specs": {
+      "weight_kg": 1.4,
+      "ram_gb": 16,
+      "storage_gb": 512,
+      "battery_hours": 9,
+      "processor": "Intel Core i5"
+    },
+    "description": "Lightweight laptop for travel, coding and everyday productivity."
+  },
+  {
+    "name": "CodePro 15",
+    "category": "laptop",
+    "price": 29999,
+    "specs": {
+      "weight_kg": 1.8,
+      "ram_gb": 16,
+      "storage_gb": 512,
+      "battery_hours": 7,
+      "processor": "AMD Ryzen 5"
+    },
+    "description": "Performance-focused laptop suitable for programming and development."
+  },
+  {
+    "name": "PowerMax 15",
+    "category": "laptop",
+    "price": 34999,
+    "specs": {
+      "weight_kg": 2.1,
+      "ram_gb": 16,
+      "storage_gb": 1024,
+      "battery_hours": 8,
+      "processor": "Intel Core i7"
+    },
+    "description": "High-performance laptop for development and demanding workloads."
+  },
+  {
+    "name": "LiteBook 13",
+    "category": "laptop",
+    "price": 26999,
+    "specs": {
+      "weight_kg": 1.2,
+      "ram_gb": 8,
+      "storage_gb": 512,
+      "battery_hours": 11,
+      "processor": "Intel Core i3"
+    },
+    "description": "Ultra-light laptop with excellent battery life for travel."
+  },
+  {
+    "name": "BudgetBook 14",
+    "category": "laptop",
+    "price": 21999,
+    "specs": {
+      "weight_kg": 1.7,
+      "ram_gb": 8,
+      "storage_gb": 256,
+      "battery_hours": 6,
+      "processor": "AMD Ryzen 3"
+    },
+    "description": "Affordable laptop for basic productivity and everyday tasks."
+  },
+  {
+    "name": "DevStation 16",
+    "category": "laptop",
+    "price": 42999,
+    "specs": {
+      "weight_kg": 2.3,
+      "ram_gb": 32,
+      "storage_gb": 1024,
+      "battery_hours": 7,
+      "processor": "Intel Core i7"
+    },
+    "description": "Powerful laptop designed for software development and heavy workloads."
+  },
+  {
+    "name": "EcoLaptop 14",
+    "category": "laptop",
+    "price": 31999,
+    "specs": {
+      "weight_kg": 1.5,
+      "ram_gb": 16,
+      "storage_gb": 512,
+      "battery_hours": 12,
+      "processor": "AMD Ryzen 5"
+    },
+    "description": "Energy-efficient laptop with long battery life and good portability."
+  },
+  {
+    "name": "GameCore 15",
+    "category": "laptop",
+    "price": 49999,
+    "specs": {
+      "weight_kg": 2.4,
+      "ram_gb": 16,
+      "storage_gb": 1024,
+      "battery_hours": 5,
+      "processor": "AMD Ryzen 7"
+    },
+    "description": "Gaming-oriented laptop with powerful processing performance."
+  },
+  {
+    "name": "StudyMate 14",
+    "category": "laptop",
+    "price": 23999,
+    "specs": {
+      "weight_kg": 1.6,
+      "ram_gb": 8,
+      "storage_gb": 256,
+      "battery_hours": 8,
+      "processor": "Intel Core i3"
+    },
+    "description": "Affordable laptop for students, browsing and office work."
+  },
+  {
+    "name": "CreatorBook 15",
+    "category": "laptop",
+    "price": 45999,
+    "specs": {
+      "weight_kg": 1.9,
+      "ram_gb": 32,
+      "storage_gb": 1024,
+      "battery_hours": 8,
+      "processor": "Intel Core i7"
+    },
+    "description": "High-performance laptop for development and creative workloads."
+  },
+  {
+    "name": "UltraLite 13",
+    "category": "laptop",
+    "price": 37999,
+    "specs": {
+      "weight_kg": 1.1,
+      "ram_gb": 16,
+      "storage_gb": 512,
+      "battery_hours": 13,
+      "processor": "Intel Core i5"
+    },
+    "description": "Premium ultra-light laptop focused on portability and battery life."
+  },
+  {
+    "name": "WorkMate 15",
+    "category": "laptop",
+    "price": 27999,
+    "specs": {
+      "weight_kg": 1.9,
+      "ram_gb": 16,
+      "storage_gb": 512,
+      "battery_hours": 8,
+      "processor": "AMD Ryzen 5"
+    },
+    "description": "Balanced laptop for office work, programming and productivity."
+  },
+  {
+    "name": "PixelBook 14",
+    "category": "laptop",
+    "price": 30999,
+    "specs": {
+      "weight_kg": 1.3,
+      "ram_gb": 16,
+      "storage_gb": 512,
+      "battery_hours": 10,
+      "processor": "Intel Core i5"
+    },
+    "description": "Portable laptop with a strong balance of performance and battery life."
+  },
+  {
+    "name": "BasicPro 14",
+    "category": "laptop",
+    "price": 19999,
+    "specs": {
+      "weight_kg": 1.8,
+      "ram_gb": 8,
+      "storage_gb": 256,
+      "battery_hours": 7,
+      "processor": "Intel Core i3"
+    },
+    "description": "Entry-level laptop for basic computing and office applications."
+  },
+  {
+    "name": "ProCoder 15",
+    "category": "laptop",
+    "price": 38999,
+    "specs": {
+      "weight_kg": 1.9,
+      "ram_gb": 32,
+      "storage_gb": 512,
+      "battery_hours": 9,
+      "processor": "AMD Ryzen 7"
+    },
+    "description": "Developer-focused laptop with high memory and processing performance."
+  },
+  {
+    "name": "RoadWarrior 14",
+    "category": "laptop",
+    "price": 32999,
+    "specs": {
+      "weight_kg": 1.3,
+      "ram_gb": 16,
+      "storage_gb": 512,
+      "battery_hours": 12,
+      "processor": "AMD Ryzen 5"
+    },
+    "description": "Travel-friendly laptop designed for long working sessions away from power."
+  },
+  {
+    "name": "OfficeMax 15",
+    "category": "laptop",
+    "price": 25999,
+    "specs": {
+      "weight_kg": 2.0,
+      "ram_gb": 8,
+      "storage_gb": 512,
+      "battery_hours": 7,
+      "processor": "Intel Core i5"
+    },
+    "description": "Reliable laptop for office productivity and general business use."
+  },
+  {
+    "name": "FlexiBook 14",
+    "category": "laptop",
+    "price": 29999,
+    "specs": {
+      "weight_kg": 1.5,
+      "ram_gb": 16,
+      "storage_gb": 512,
+      "battery_hours": 10,
+      "processor": "AMD Ryzen 5"
+    },
+    "description": "Balanced laptop offering portability, performance and strong battery life."
+  }
+]
