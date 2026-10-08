@@ -4,7 +4,6 @@ import pandas as pd
 
 def load_inventory():
     json_file_path = os.path.join(
-        "..",
         "inventory",
         "inventory.json"
     )
