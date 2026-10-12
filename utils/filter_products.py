@@ -1,10 +1,36 @@
 def filter_products(inventory, user_requirements):
-    matching_products = inventory[
-        (inventory["price"] <= user_requirements.max_price) &
-        (inventory["weight_kg"] <= user_requirements.max_weight_kg) &
-        (inventory["ram_gb"] >= user_requirements.min_ram_gb) &
-        (inventory["storage_gb"] >= user_requirements.min_storage_gb) &
-        (inventory["battery_hours"] >= user_requirements.min_battery_hours)
-    ]
+    '''
+    Filter products based on the user's hard requirements.
+
+    Args:
+        inventory: Pandas DataFrame containing all available products.
+        user_requirements: Structured requirements extracted from the user's query.
+
+    Returns:
+        Pandas DataFrame containing products that meet the hard constraints.
+    '''
+
+    filters = {
+        "price": ("max_price", "<="),
+        "weight_kg": ("max_weight_kg", "<="),
+        "ram_gb": ("min_ram_gb", ">="),
+        "storage_gb": ("min_storage_gb", ">="),
+        "battery_hours": ("min_battery_hours", ">=")
+    }
+
+    matching_products = inventory.copy()
+
+    for column, (requirement, operator) in filters.items():
+        value = getattr(user_requirements, requirement)
+
+        if value is not None:
+            if operator == "<=":
+                matching_products = matching_products[
+                    matching_products[column] <= value
+                ]
+            else:
+                matching_products = matching_products[
+                    matching_products[column] >= value
+                ]
 
     return matching_products
