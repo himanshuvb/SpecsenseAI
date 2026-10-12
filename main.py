@@ -39,6 +39,9 @@ def main():
             user_requirements
         )
     # Display exact matches
+    
+    print("ranked products:")
+    print(ranked_products)
 
 
 if __name__ == "__main__":
