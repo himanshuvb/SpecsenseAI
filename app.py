@@ -5,7 +5,8 @@ from utils.inventory import load_inventory
 from utils.llm_client import LLMClient
 from utils.filter_products import filter_products
 from utils.ranking import rank_products
-
+from google.genai.errors import ServerError
+from utils.validate_requirements import has_actionable_requirements
 
 st.set_page_config(
     page_title="SpecSense AI",
@@ -42,7 +43,13 @@ if st.button("Find laptops", type="primary"):
             if user_requirements is None:
                 st.error("Could not understand your requirements. Please try again.")
                 st.stop()
-
+                
+            if not has_actionable_requirements(user_requirements):
+                st.info(
+                    "Please specify at least one requirement or preference, "
+                    "such as budget, RAM, weight, battery life, or intended use."
+                )
+                st.stop()
             st.subheader("Requirements understood")
 
             with st.expander("View extracted requirements"):
@@ -102,4 +109,13 @@ if st.button("Find laptops", type="primary"):
             st.error(
                 "Something went wrong while generating recommendations."
             )
-            st.exception(error)
+            
+
+            if isinstance(error, ServerError) and error.code == 503:
+                st.warning(
+                    "Gemini is temporarily unavailable due to high demand. "
+                    "Please try again in a little while."
+                )
+            else:
+                st.error("Something went wrong while generating recommendations.")
+                st.exception(error)
