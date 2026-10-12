@@ -14,6 +14,7 @@ class UserRequirements(BaseModel):
     good_battery: bool = False
     use_case: str | None = None
 
+
     # Preference priorities
     weight_priority: float = 0.0
     battery_priority: float = 0.0
