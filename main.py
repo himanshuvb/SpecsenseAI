@@ -28,6 +28,16 @@ def main():
 
     print(matching_products)
 
+    if matching_products.empty:
+        alternatives = find_alternatives(inventory, user_requirements)
+        # Display alternatives and explain their trade-offs
+    else:
+        ranked_products = rank_products(
+            matching_products,
+            user_requirements
+        )
+    # Display exact matches
+
 
 if __name__ == "__main__":
     main()
