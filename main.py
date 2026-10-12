@@ -3,6 +3,7 @@ from utils.filter_products import filter_products
 from utils.llm_client import LLMClient
 from utils.ranking import rank_products
 
+
 def main():
 
     # Load inventory
@@ -12,7 +13,7 @@ def main():
     user_query = input("What kind of laptop are you looking for? ")
 
     # Convert user query → structured requirements
-    llm = LLMClient(model_name="gemini-3.5-flash")
+    llm = LLMClient(model_name="gemini-3.8-flash")
 
     user_requirements = llm.user_req_to_pydantic_model(
         user_query
@@ -29,7 +30,8 @@ def main():
     print(matching_products)
 
     if matching_products.empty:
-        alternatives = find_alternatives(inventory, user_requirements)
+        print("No exact matches found. Here are some alternatives:")
+        #alternatives = find_alternatives(inventory, user_requirements)
         # Display alternatives and explain their trade-offs
     else:
         ranked_products = rank_products(

@@ -3,6 +3,8 @@ import os
 
 from models.requirements import UserRequirements
 from dotenv import load_dotenv
+from tenacity import retry, stop_after_attempt, wait_exponential, retry_if_exception_type
+from google.genai.errors import ServerError
 
 load_dotenv()  # Load environment variables from .env file
 
@@ -14,6 +16,12 @@ class LLMClient:
             api_key=os.environ.get("GEMINI_API_KEY")
         )
 
+    @retry(
+        stop=stop_after_attempt(3),
+        wait=wait_exponential(multiplier=1, min=2, max=3),
+        retry=retry_if_exception_type(ServerError),
+        reraise=True
+    )    
     def user_req_to_pydantic_model(
         self,
         user_requirements: str

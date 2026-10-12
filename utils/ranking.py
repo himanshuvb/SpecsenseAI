@@ -40,14 +40,14 @@ def rank_products(matching_products, user_preferences):
         )
         total_priority += user_preferences.battery_priority
 
-    if total_priority > 0:
-        ranked_products["recommendation_score"] = (
-            sum(weighted_scores) / total_priority
-        )
+    if total_priority == 0:
+        return ranked_products
 
-        ranked_products = ranked_products.sort_values(
-            by="recommendation_score",
-            ascending=False
-        )
+    ranked_products["recommendation_score"] = (
+        sum(weighted_scores) / total_priority
+    )
 
-    return ranked_products
+    return ranked_products.sort_values(
+        by="recommendation_score",
+        ascending=False
+    )
