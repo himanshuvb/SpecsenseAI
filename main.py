@@ -1,7 +1,7 @@
 from utils.inventory import load_inventory
 from utils.filter_products import filter_products
 from utils.llm_client import LLMClient
-
+from utils.ranking import rank_products
 
 def main():
 
